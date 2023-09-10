@@ -6,8 +6,8 @@
 force-app/main/default/*
 !force-app/main/default/classes/
 force-app/main/default/classes/orientacao-a-objetos/*
-!force-app/main/default/classes/orientacao-a-objetos/Filme.cls
-!force-app/main/default/classes/orientacao-a-objetos/Filme.cls-meta.xml
+!force-app/main/default/classes/orientacao-a-objetos/modelos/
+
 
 # Salesforce cache
 .sf/
