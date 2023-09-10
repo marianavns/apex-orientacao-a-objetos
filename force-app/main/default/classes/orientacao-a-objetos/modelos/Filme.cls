@@ -1,41 +1,14 @@
 public with sharing class Filme {
 
-    // CRIANDO AS INFORMAÇÕES QUE TODO FILME DEVE TER PARA SER REGISTRADO DIREITO
+    /* Especificar quais informações devem ser preenchidas para criar um filme */
     String nome;
     Integer anoDeLancamento;
     Boolean incluidoNoPlano;
 
-    /*
-        Assim, terei um filme em qualquer classe do sistema em que eu escrever isso:
-        Filme meuFilme = new Filme();
-    */
 
-
-    /* CRIANDO UM FILME NA PRÁTICA (ou "instanciando o objeto filme") */
-
-    public static void criaFilme(){
-
-        Filme meuFilme = new Filme();
-        meuFilme.nome = 'Cidade de Deus';
-        meuFilme.anoDeLancamento = 2002;
-        meuFilme.incluidoNoPlano = true;
-
-        System.debug('Filme criado na linguagem da máquina: ' + meuFilme);
-        System.debug('Filme: ' + meuFilme.nome + '. Lançamento: ' + meuFilme.anoDeLancamento + '. Incluído no plano? ' + meuFilme.incluidoNoPlano);
+    /* Criar um construtor para que o nome do filme seja obrigatório. Se isso não for feito, temos apenas o construtor PADRÃO. E o construtor padrão não deixa marcar informações como obrigatórias de preenchimento.*/
+    public Filme(String nomeInput){
+        this.nome = nomeInput;
     }
-
-
-
-    /* Temos alguns problemas com esta forma de criar filmes. Um deles está descrito abaixo: a criação de um filme sem nome, lançado em 1300 e incluído no plano. Não faz sentido! */ 
-    public static void criaFilmeComProblema(){
-
-        Filme meuFilme = new Filme();
-        meuFilme.nome = '';
-        meuFilme.anoDeLancamento = 1300;
-        meuFilme.incluidoNoPlano = true;
-
-        System.debug('Filme criado na linguagem da máquina: ' + meuFilme);
-        System.debug('Filme: ' + meuFilme.nome + '. Lançamento: ' + meuFilme.anoDeLancamento + '. Incluído no plano? ' + meuFilme.incluidoNoPlano);
-        }
 
 }
