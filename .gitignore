@@ -4,6 +4,8 @@
 
 # Arquivosque não interessam para este módulo
 force-app/main/default/*
+!force-app/main/default/classes/
+force-app/main/default/classes/orientacao-a-objetos/
 
 # Salesforce cache
 .sf/
