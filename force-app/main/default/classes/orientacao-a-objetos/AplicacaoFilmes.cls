@@ -5,7 +5,7 @@ public with sharing class AplicacaoFilmes {
         
         /* Se não inserir o nome do filme já aqui, o filme nem é criado. */
         Filme meuFilme = new Filme('A Menina Astronauta e Suas Aventura');
-        
+
         /* 
             Como era feito antes, mas não funciona mais, pois as informações dos filmes estão privadas:
             meuFilme.nome = 'A Menina Astronauta e Suas Aventuras';
@@ -22,17 +22,5 @@ public with sharing class AplicacaoFilmes {
         System.debug('Filme criado na linguagem da máquina: ' + meuFilme);
         System.debug('Filme: ' + meuFilme.getNome() + '. Lançamento: ' + meuFilme.getAnoDeLancamento() + '. Incluído no plano? ' + meuFilme.getIncluidoNoPlano());
     }
-
-
-
-    /*public static void criaFilmeComProblema(){
-        Filme meuFilme = new Filme();
-        meuFilme.nome = '';
-        meuFilme.anoDeLancamento = 1300;
-        meuFilme.incluidoNoPlano = true;
-        System.debug('Filme criado na linguagem da máquina: ' + meuFilme);
-        System.debug('Filme: ' + meuFilme.nome + '. Lançamento: ' + meuFilme.anoDeLancamento + '. Incluído no plano? ' + meuFilme.incluidoNoPlano);
-    }*/
-
 
 }
