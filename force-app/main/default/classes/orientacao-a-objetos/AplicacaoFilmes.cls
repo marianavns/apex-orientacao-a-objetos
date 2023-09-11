@@ -3,8 +3,8 @@ public with sharing class AplicacaoFilmes {
 
     public static void criaFilme(){
         
-        /* Se não inserir o nome do filme já aqui, o filme nem é criado. */
         Filme meuFilme = new Filme('A Menina Astronauta e Suas Aventura');
+            /* Se não inserir o nome do filme já aqui, o filme nem é criado. */
 
         /* 
             Como era feito antes, mas não funciona mais, pois as informações dos filmes estão privadas:
