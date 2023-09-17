@@ -1,19 +1,27 @@
 public with sharing abstract class Titulo {
-    public Titulo() {
 
-    }
 
-    /* Especificar quais informações devem ser preenchidas para criar um título */
-    private String nome;
-    private Integer anoDeLancamento;
-    private Boolean incluidoNoPlano;
+    // CONSTRUTOR: 
+    // Todo título deve ter um nome, que não pode estar vazio.
+        public Titulo(String nomeInput) {
+            if (nomeInput != '') this.nome = nomeInput;   
+        }
 
-    /* Criando os meios que nos permitem acessar e alterar as informações dos títulos, mas da forma certa. */
+
+    // ATRIBUTOS
+    // Especificar quais informações devem ser preenchidas para criar um título
+        private String nome;
+        private Integer anoDeLancamento;
+        private Boolean incluidoNoPlano;
+
+
+    // MÉTODOS
+    // Meios que nos permitem acessar e alterar as informações dos títulos, mas da forma certa.
     public String getNome(){
         return this.nome;
     }
 
-    public void setNome(String nomeInput){
+    public void mudaNome(String nomeInput){
         if (nomeInput != null) {
             this.nome = nomeInput;
         }
