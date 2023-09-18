@@ -1,4 +1,4 @@
-public with sharing class Podcast extends Titulo{
+public with sharing class Podcast extends Titulo implements DivisivelPorTemporada{
     
     // CONSTRUTOR
     public Podcast() {
@@ -16,5 +16,7 @@ public with sharing class Podcast extends Titulo{
     public void setHost(String hostInput){
         this.host = hostInput;
     }
+
+    // IMPLEMENTE OS MÉTODOS QUE A INTERFACE MANDOU!
     
 }
