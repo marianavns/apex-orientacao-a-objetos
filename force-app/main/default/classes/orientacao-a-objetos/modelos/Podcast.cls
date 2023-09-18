@@ -1,7 +1,7 @@
 public with sharing class Podcast extends Titulo implements DivisivelPorTemporada{
     
     // CONSTRUTOR
-    public Podcast() {
+    public Podcast(String nomeInput) {
         super(nomeInput);
     }
 
@@ -16,7 +16,19 @@ public with sharing class Podcast extends Titulo implements DivisivelPorTemporad
     public void setHost(String hostInput){
         this.host = hostInput;
     }
-
-    // IMPLEMENTE OS MÉTODOS QUE A INTERFACE MANDOU!
     
+
+    // MÉTODOS OBRIGATÓRIOS POR CAUSA DO "IMPLEMENTS".
+    public void setTemporadas (Integer temporadasInput){
+        this.temporadas = temporadasInput;
+    }
+
+    public Integer getTemporadas (){
+        return this.temporadas;
+    }
+
+    public Integer calculaMedia(Integer episodios, Integer somatorioPontosEpisodios){
+        return this.somatorioPontosEpisodios / this.temporadas;
+    }
+
 }
