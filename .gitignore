@@ -9,6 +9,7 @@ force-app/main/default/classes/orientacao-a-objetos/*
 !force-app/main/default/classes/orientacao-a-objetos/modelos/
 !force-app/main/default/classes/orientacao-a-objetos/Aplicacao.cls 
 !force-app/main/default/classes/orientacao-a-objetos/Aplicacao.cls-meta.xml
+!force-app/main/default/classes/orientacao-a-objetos/interfaces/
 
 
 # Salesforce cache
