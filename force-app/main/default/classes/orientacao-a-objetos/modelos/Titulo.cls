@@ -11,7 +11,7 @@ public with sharing abstract class Titulo {
     // ATRIBUTOS
     // Especificar quais informações devem ser preenchidas para criar um título
         private String nome;
-        private Integer anoDeLancamento;
+        private Integer anoDeLancamento; // Se aqui fosse "protected Integer anoDeLancamento", esse atributo poderia ser acessado livremente por todas as classes-filhas.
         private Boolean incluidoNoPlano;
 
 
