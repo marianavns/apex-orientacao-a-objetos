@@ -1,4 +1,4 @@
-public with sharing class Serie extends Titulo implements DivisivelPorTemporada {
+public with sharing class Serie extends Titulo implements DivisivelPorEpisodios {
     
     
     // CONSTRUTOR
@@ -11,12 +11,11 @@ public with sharing class Serie extends Titulo implements DivisivelPorTemporada 
 
     // ATRIBUTOS
     Integer temporadas;
-    Integer somatorioPontosEpisodios;
     Integer episodios;
 
 
-    // MÉTODOS QUE JÁ EXISTIAM, MAS AGORA SÃO OBRIGATÓRIOS POR CAUSA DO "IMPLEMENTS".
-    public void setTemporadas (Integer temporadasInput){
+    // MÉTODOS válidos apenas para as séries
+    public void mudaTemporadas (Integer temporadasInput){
         this.temporadas = temporadasInput;
     }
 
@@ -24,7 +23,14 @@ public with sharing class Serie extends Titulo implements DivisivelPorTemporada 
         return this.temporadas;
     }
 
-    public Integer calculaMedia(Integer episodios, Integer somatorioPontosEpisodios){
-        return this.somatorioPontosEpisodios / this.episodios;
+
+
+    // MÉTODOS OBRIGATÓRIOS após "implements" em DivisivelPorEpisodios
+    public void setEpisodios (Integer episodiosInput){
+        this.episodios = episodiosInput;
+    }
+
+    public Integer getEpisodios (){
+        return this.episodios;
     }
 }
